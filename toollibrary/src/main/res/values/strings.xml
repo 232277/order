@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ToolLibrary</string>
+    <string name="toolibrary_btn_clear">清空</string>
+    <string name="toolibrary_btn_delete">删除</string>
+    <string name="toolibrary_btn_confirm">确定</string>
+    <string name="toolibrary_btn_cancel">取消</string>
+    <string name="toollibrary_btn_reset">重置</string>
+
+    <string name="toollibrary_label_concurrency_sign">￥</string>
+    <string name="toollibrary_label_concurrency_sign_chinese">元</string>
+    <string name="toolibrary_date_format">MM月dd日 HH:mm:ss</string>
+    <string name="toolibrary_date_format_year2_month_day_hour_minute">yy/MM/dd HH:mm</string>
+    <string name="toolibrary_date_format_year_month_day">yyyy-MM-dd</string>
+    <string name="toolibrary_date_format_hour_minute_second">HH:mm:ss</string>
+    <string name="toolibrary_date_format_year_month_day_hour_second_mini_seconds">yyyy-MM-dd HH:mm:ss</string>
+    <string name="toolibrary_date_format_year_month_day_hour_second_mini_seconds_no_separate">yyyyMMddHHmmss</string>
+    <string name="toolibrary_date_format_fail">无</string>
+    <string name="toolibrary_double_2point_format">##########.##</string>
+</resources>

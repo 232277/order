@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/toollibrary_circle_corner_input_dialog"
+    android:paddingBottom="20dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:text="库存调整"
+        android:lines="1"
+        android:textColor="@color/toollibrary_edit_title_text_color"/>
+
+    <TextView
+        android:id="@+id/secTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="sectitle"
+        android:textSize="13sp"
+        android:textColor="@color/toollibrary_dialog_sec_title_color"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/secTitleContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="content"
+        android:textSize="13sp"
+        android:textColor="@color/toollibrary_dialog_sec_title_color"
+        app:layout_constraintStart_toStartOf="@id/edit1Layout"
+        app:layout_constraintBottom_toBottomOf="@id/secTitle"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/star1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/toollibrary_red"
+        app:layout_constraintTop_toTopOf="@id/editLabel1"
+        app:layout_constraintEnd_toStartOf="@id/editLabel1"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/editLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit1Layout"
+        app:layout_constraintBottom_toBottomOf="@id/edit1Layout"
+        android:text="现有库存"
+        android:textColor="@color/toollibrary_edit_title_text_color"
+        android:textSize="15sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/edit1Layout"
+        android:layout_width="185dp"
+        android:layout_height="37dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/toollibrary_circle_corner_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/secTitle"
+        app:layout_constraintStart_toEndOf="@id/editLabel1"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.dyc.administrator.toollibrary.view.FirstFixEditText
+            android:id="@+id/edit1"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:hint="请输入现有库存"
+            android:background="@drawable/toollibrary_circle_corner_edit_text"
+            android:textColorHint="@color/toollibrary_dialog_edit_hint_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/endFix1"/>
+
+        <TextView
+            android:id="@+id/endFix1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/edit1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edit1"
+            app:layout_constraintBottom_toBottomOf="@id/edit1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/star2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/toollibrary_red"
+        app:layout_constraintTop_toTopOf="@id/editLabel2"
+        app:layout_constraintEnd_toStartOf="@id/editLabel2"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/editLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:textColor="@color/toollibrary_edit_title_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit2Layout"
+        app:layout_constraintBottom_toBottomOf="@id/edit2Layout"
+        android:text="库存差额"
+        android:textSize="15sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/edit2Layout"
+        android:layout_width="185dp"
+        android:layout_height="37dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/toollibrary_circle_corner_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editLabel2"
+        app:layout_constraintTop_toBottomOf="@id/edit1Layout" >
+
+        <com.dyc.administrator.toollibrary.view.FirstFixEditText
+            android:id="@+id/edit2"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:hint="请输入现有库存"
+            android:textColorHint="@color/toollibrary_dialog_edit_hint_color"
+            android:background="@drawable/toollibrary_circle_corner_edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/endFix2"/>
+
+        <TextView
+            android:id="@+id/endFix2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/edit2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edit2"
+            app:layout_constraintBottom_toBottomOf="@id/edit2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="33dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginStart="21dp"
+        android:background="@drawable/toollibrary_circle_corner_cancel_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/confirm"
+        app:layout_constraintTop_toBottomOf="@id/edit2Layout"
+        android:layout_marginBottom="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/toollibrary_white"
+        android:text="@string/toolibrary_btn_cancel"/>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="33dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:background="@drawable/toollibrary_circle_corner_confirm_btn"
+        app:layout_constraintStart_toEndOf="@id/cancel"
+        app:layout_constraintTop_toTopOf="@id/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15sp"
+        android:textColor="@color/toollibrary_white"
+        android:text="@string/toolibrary_btn_confirm"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

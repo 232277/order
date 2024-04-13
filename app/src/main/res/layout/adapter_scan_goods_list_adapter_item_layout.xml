@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="103dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/toollibrary_white"
+    android:layout_marginBottom="1dp"
+    android:id="@+id/rootView">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/goodsIcon"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/pic_no_picture"
+        android:scaleType="centerCrop"
+        app:riv_border_color="@color/background_gray"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/goodsName"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="苹果苹果平平过瓶坯奥斯迪噶打开建行阿斯顿发的说法的卡"
+        android:textColor="@color/normal_item_text_color"
+        android:textSize="15sp"
+        android:lineSpacingMultiplier="0.8"
+        android:lines="2"
+        android:layout_marginEnd="13dp"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toEndOf="@id/goodsIcon"
+        app:layout_constraintEnd_toStartOf="@id/delete"
+        app:layout_constraintTop_toTopOf="@id/goodsIcon"/>
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="2.5dp"
+        android:src="@mipmap/icon_commodity_del"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/labelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/discountPrice"
+        app:layout_constraintTop_toBottomOf="@id/goodsName"
+        app:layout_constraintBottom_toTopOf="@id/discountPrice"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/priceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动价"
+            android:textSize="9sp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/circle_corner_member_price_label"
+            android:textColor="@color/member_price_label_color"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="@id/discountPrice"
+            app:layout_constraintEnd_toStartOf="@id/activityLabel"
+            app:layout_constraintBottom_toTopOf="@id/discountPrice"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/activityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_scan_goods_activity_price_label"
+            android:textSize="9sp"
+            android:background="@drawable/circle_corner_activity_condition_label"
+            android:textColor="@color/activity_condition_label_color"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toEndOf="@id/priceLabel"
+            app:layout_constraintBottom_toBottomOf="@id/priceLabel"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/discountPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥50"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/normal_item_text_color_red"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="@id/goodsName"
+        app:layout_constraintBottom_toBottomOf="@id/goodsIcon"
+        />
+
+    <TextView
+        android:id="@+id/oriPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥0.0"
+        android:textSize="10sp"
+        android:textColor="@color/normal_item_text_color_gray"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toEndOf="@id/discountPrice"
+        app:layout_constraintBaseline_toBaselineOf="@id/discountPrice"
+        android:layout_marginStart="2dp"/>
+
+
+    <com.dyc.administrator.toollibrary.view.QuantityView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/goodsIcon"
+        app:layout_constraintEnd_toEndOf="@id/delete"
+        android:layout_marginEnd="@dimen/dp_10"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

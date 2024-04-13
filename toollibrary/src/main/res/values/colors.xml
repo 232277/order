@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toollibrary_them_blue">#2B85FB</color>
+    <color name="toollibrary_white">#FFFFFF</color>
+    <color name="toollibrary_dialog_gray">#65333333</color>
+    <color name="toollibrary_my_edit_text_color">#80000000</color>
+    <color name="toollibrary_gray">#AEAEAE</color>
+    <color name="toollibrary_red">#ff0000</color>
+    <color name="toollibrary_black">#000000</color>
+    <color name="toollibrary_edit_title_text_color">#4D4D4D</color>
+    <color name="toollibrary_dialog_text_gray">#989598</color>
+    <color name="toollibrary_dialog_sec_title_color">#999999</color>
+    <color name="toollibrary_dialog_edit_background">#FAF7FA</color>
+    <color name="toollibrary_dialog_edit_hint_color">#CCCCCC</color>
+    <color name="toollibrary_dialog_cancel_btn_gray">#9A979B</color>
+    <color name="toollibrary_dialog_confirm_btn_blue">#2D85F9</color>
+    <color name="toollibrary_dialog_background_gray">#5E5B5E</color>
+    <color name="toollibrary_code_shadow_white">#A4BEE1</color>
+    <color name="toollibrary_divider_gray">#e3e3e3</color>
+    <color name="toollibrary_btn_gray">#9A979B</color>
+    <color name="toollibrary_btn_blue">#0064FA</color>
+    <color name="toollibrary_edit_frame_gray">#EFECF0</color>
+    <color name="toollibrary_background_gray">#EDEDED</color>
+    <color name="toollibrary_transparent">#00000000</color>
+</resources>

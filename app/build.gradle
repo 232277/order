@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.2"
+    signingConfigs {
+        debug{
+            storeFile file('../sign')
+            storePassword 'baiyuas'
+            keyAlias 'baiyuas'
+            keyPassword 'baiyuas'
+        }
+        release {
+            storeFile file('../sign')
+            storePassword 'baiyuas'
+            keyAlias 'baiyuas'
+            keyPassword 'baiyuas'
+        }
+    }
+    defaultConfig {
+//        applicationId "com.centerm.smartorder"
+//        applicationId "com.centerm.cpay.parkingmanage"
+        applicationId "com.dyc.order.cashier"
+        minSdkVersion 26
+        targetSdkVersion 28
+        versionCode 3
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/aidl']
+        }
+    }
+
+//    externalNativeBuild {
+//        ndkBuild {
+//            path file('../libuvccamera/src/main/jni/Android.mk')
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':simplemvplibrary')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //注解处理器，生成RxHttp类，即可一条链发送请求
+    api 'com.rxjava.rxhttp:rxhttp:2.1.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'com.rxjava.rxlife:rxlife-x:2.0.0'
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:2.1.1'
+    implementation 'org.jetbrains:annotations:15.0'
+}

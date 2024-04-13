@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageTextView">
+        <attr name="it_title_text" format="string" />
+        <attr name="it_title_textSize" format="dimension" />
+        <attr name="it_title_textColor" format="color"/>
+        <attr name="it_icon" format="reference" />
+        <attr name="it_icon_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="RightDrawableEditText">
+        <attr name="my_edit_drawable_size_left" format="dimension"/>
+        <attr name="my_edit_drawable_size_right" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="AttrInputItem">
+        <attr name="attr_star_enable" format="boolean"/>
+        <attr name="attr_title" format="string" />
+        <attr name="attr_title_size" format="dimension" />
+        <attr name="attr_title_color" format="reference"/>
+        <attr name="attr_hint_text" format="string"/>
+        <attr name="attr_edit_text_size" format="dimension"/>
+        <attr name="attr_edit_text_focusable" format="boolean"/>
+        <attr name="attr_text1_text" format="string"/>
+        <attr name="attr_text1_text_size" format="dimension"/>
+        <attr name="attr_text2_text" format="string"/>
+        <attr name="attr_text2_text_size" format="dimension"/>
+        <attr name="attr_img" format="reference" />
+        <attr name="attr_divider_enable" format="boolean"/>
+        <attr name="attr_divider_color" format="color"/>
+        <attr name="attr_divider_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SortChooseTab">
+        <attr name="sort_group_name" format="string"/>
+        <attr name="sort_selected" format="boolean" />
+        <attr name="sort_id" format="integer" />
+        <attr name="sort_name" format="string"/>
+        <attr name="sort_line_color" format="color"/>
+        <attr name="sort_line_color_unselected" format="color"/>
+        <attr name="sort_name_color" format="color"/>
+        <attr name="sort_name_color_unselected" format="color"/>
+        <attr name="sort_imgId" format="reference"/>
+        <attr name="sort_imgId_unselected" format="reference"/>
+        <attr name="sort_name_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="BadgeView">
+        <attr name="badge_view_img" format="reference"/>
+        <attr name="badge_view_badge_img" format="reference" />
+        <attr name="badge_view_text" format="string"/>
+        <attr name="badge_view_text_size" format="dimension"/>
+        <attr name="badge_view_text_color" format="color"/>
+        <attr name="badge_view_background" format="reference"/>
+        <attr name="badge_view_background_checked" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="NormalTopBar">
+        <attr name="normal_top_bar_title_str" format="string"/>
+        <attr name="normal_top_bar_background" format="reference"/>
+    </declare-styleable>
+</resources>

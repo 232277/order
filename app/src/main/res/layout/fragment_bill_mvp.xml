@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mvp.fragment.BillMVPFragment">
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="￥0.00"
+        android:textColor="@color/toollibrary_white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:includeFontPadding="false"
+        />
+
+    <TextView
+        android:id="@+id/shouldPayStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalPrice"
+        android:text="@string/label_bill_mvp_should_pay"
+        android:textSize="15sp"
+        android:textColor="@color/toollibrary_white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainView"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@color/WHITE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shouldPayStr"
+        android:layout_marginTop="26.5dp">
+
+        <TextView
+            style="@style/billMvpTitleStrStyle"
+            android:layout_marginTop="18dp"
+            android:id="@+id/oriPriceStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/label_bill_mvp_ori_amount"
+            />
+
+        <TextView
+            android:id="@+id/oriPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0.00"
+            android:textSize="15sp"
+            android:textColor="@color/normal_item_text_color"
+            android:layout_marginEnd="20.5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/oriPriceStr"/>
+
+        <View
+            android:id="@+id/oriPriceDivider"
+            style="@style/billDividerLineStyle"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/oriPriceStr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/goodsDiscountStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oriPriceStr"
+            style="@style/billMvpTitleStrStyle"
+            android:text="@string/label_bill_mvp_goods_discount" />
+
+        <TextView
+            android:id="@+id/goodsDiscount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:text="￥0.00"
+            android:textColor="@color/dialog_price_text_red"
+            android:textSize="15sp"
+            android:layout_marginEnd="20.5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/goodsDiscountStr" />
+
+        <View
+            android:id="@+id/goodsDiscountDivider"
+            style="@style/billDividerLineStyle"
+            app:layout_constraintTop_toBottomOf="@id/goodsDiscountStr"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            style="@style/billMvpTitleStrStyle"
+            android:id="@+id/activityDiscountStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/goodsDiscountStr"
+            android:text="@string/label_bill_mvp_activity_discount" />
+
+        <TextView
+            android:id="@+id/activityDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0.00"
+            android:textColor="@color/dialog_price_text_red"
+            android:textSize="15sp"
+            android:layout_marginEnd="20.5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/activityDiscountStr"
+            />
+
+        <LinearLayout
+            android:id="@+id/activityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="12.5dp"
+            android:layout_marginStart="@dimen/dp_10"
+
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/activityDiscountStr"
+            app:layout_constraintTop_toTopOf="@id/activityDiscountStr"
+            android:visibility="invisible"/>
+<!--        <TextView-->
+<!--            android:id="@+id/activityLabel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/dp_10"-->
+<!--            android:textColor="@color/member_price_label_color"-->
+<!--            android:background="@drawable/circle_corner_bill_mvp_activity_label"-->
+<!--            android:text="满200减20"-->
+<!--            android:textSize="9sp"-->
+<!--            app:layout_constraintStart_toEndOf="@id/activityDiscountStr"-->
+<!--            app:layout_constraintTop_toTopOf="@id/activityDiscountStr"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/activityDiscountStr"-->
+<!--            android:visibility="visible"/>-->
+
+        <View
+            android:id="@+id/activityDiscountDivider"
+            style="@style/billDividerLineStyle"
+            app:layout_constraintTop_toBottomOf="@id/activityLabel"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            style="@style/billMvpTitleStrStyle"
+            android:id="@+id/couponStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="17dp"
+            app:layout_constraintTop_toBottomOf="@id/activityDiscountDivider"
+            android:text="@string/label_bill_mvp_coupon"/>
+
+        <TextView
+            android:id="@+id/couponLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/label_bill_mvp_no_enable_coupon"
+            android:textSize="15sp"
+            android:textColor="@color/normal_item_text_color"
+            android:layout_margin="7.5dp"
+            app:layout_constraintEnd_toStartOf="@id/couponArrow"
+            app:layout_constraintTop_toTopOf="@id/couponArrow"
+            app:layout_constraintBottom_toBottomOf="@id/couponArrow"/>
+
+        <ImageView
+            android:id="@+id/couponArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20.5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/couponStr"
+            app:layout_constraintBottom_toBottomOf="@id/couponStr"
+            android:src="@mipmap/icon_into"
+            />
+
+        <View
+            android:id="@+id/couponDiscountDivider"
+            style="@style/billDividerLineStyle"
+            app:layout_constraintTop_toBottomOf="@id/couponStr"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pointLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20.5dp"
+            android:layout_marginTop="30.5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/couponStr">
+
+            <TextView
+                android:id="@+id/pointDiscountStr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_bill_mvp_point_discount"
+                android:textSize="15sp"
+                android:textColor="@color/normal_item_text_color_gray_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/pointDiscountStr"
+                app:layout_constraintBaseline_toBaselineOf="@id/pointDiscountStr"
+                android:text="(180积分)"
+                android:textSize="10sp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/pointDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/usePoint"
+                app:layout_constraintBaseline_toBaselineOf="@id/pointDiscountStr"
+                android:text="-￥1.00"
+                android:textSize="15sp"
+                android:textColor="@color/dialog_price_text_red"
+                android:layout_marginEnd="6.5dp"
+                />
+
+            <CheckBox
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:id="@+id/usePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_box_bill_mvp_use_point"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/pointDiscountStr"
+                app:layout_constraintBottom_toBottomOf="@id/pointDiscountStr"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/bolang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bg_bolang"
+        app:layout_constraintStart_toStartOf="@+id/mainView"
+        app:layout_constraintEnd_toEndOf="@id/mainView"
+        app:layout_constraintTop_toBottomOf="@id/mainView"/>
+
+
+    <Button
+        android:id="@+id/goPay"
+        android:layout_width="340dp"
+        android:layout_height="43dp"
+        android:text="@string/label_bill_mvp_pay_right_away"
+        android:textSize="15sp"
+        android:textColor="@color/toollibrary_white"
+        android:background="@drawable/ciecle_corner_bill_mvp_bottom_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        android:stateListAnimator="@null"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

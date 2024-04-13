@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/toollibrary_red"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="title" />
+
+        <com.dyc.administrator.toollibrary.view.FirstFixEditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:maxWidth="170dp"
+            android:layout_height="wrap_content"
+            android:hint="输入、自动生成或扫描条码"
+            android:lines="1"
+            android:textSize="12sp"
+            android:textAlignment="textEnd"
+            android:background="@null"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="text1"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/toollibrary_stroke_btn"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="text2"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/toollibrary_stroke_btn"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/toollibrary_loading"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/toollibrary_divider_gray"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

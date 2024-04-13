@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/toollibrary_circle_corner_input_dialog"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.dyc.administrator.toollibrary.view.FirstFixEditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"
+        android:padding="15dp"
+        android:background="@drawable/toollibrary_circle_corner_dialog_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/toolibrary_btn_cancel"
+        android:textSize="15sp"
+        android:textColor="@color/toollibrary_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:layout_constraintEnd_toStartOf="@id/confirm"
+        android:background="@drawable/toollibrary_circle_corner_cancel_btn"/>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/toolibrary_btn_confirm"
+        android:textSize="15sp"
+        android:textColor="@color/toollibrary_white"
+        app:layout_constraintStart_toEndOf="@id/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/cancel"
+        android:background="@drawable/toollibrary_circle_corner_confirm_btn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.serenegiant.usb.widget.UVCCameraTextureView
+        android:id="@+id/textureView"
+        android:layout_width="420dp"
+        android:layout_height="525dp"
+        app:layout_constraintVertical_bias="0.42"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/picRes"
+        android:layout_width="420dp"
+        android:layout_height="525dp"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/loadingImg"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="97.5dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="center"
+        android:src="@drawable/loading4_00000"
+        android:background="@color/WHITE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/img_renlianzhifu_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:id="@+id/leftView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="9dp"
+        android:orientation="horizontal"
+        android:onClick="onClick">
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow"
+            android:scaleType="centerInside"
+            android:onClick="onClick"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/toollibrary_white"
+            android:textSize="17sp"
+            android:layout_marginStart="9dp"
+            app:layout_constraintStart_toEndOf="@id/arrow"
+            app:layout_constraintTop_toTopOf="@id/arrow"
+            app:layout_constraintBottom_toBottomOf="@id/arrow"
+            android:onClick="onClick"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/countDownStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/WHITE"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="@id/leftView"
+        app:layout_constraintBottom_toBottomOf="@id/leftView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_register_member_jump"
+        android:textSize="15sp"
+        android:layout_marginTop="24.5dp"
+        android:textColor="@color/toollibrary_white"
+        app:layout_constraintTop_toBottomOf="@id/countDownStr"
+        app:layout_constraintEnd_toEndOf="@id/countDownStr"
+        android:onClick="onClick" />
+
+    <com.dyc.administrator.toollibrary.view.ImageTextView
+        android:id="@+id/takePhoto"
+        android:layout_width="340dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/circle_corner_add_member_blue"
+        app:it_title_text="@string/label_register_member_take_pic_btn"
+        app:it_title_textSize="15sp"
+        app:it_title_textColor="@color/toollibrary_white"
+        app:it_icon="@mipmap/icon_paishe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.dyc.administrator.toollibrary.view.ImageTextView
+        android:id="@+id/reTakePhoto"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/circle_corner_add_member_gray"
+        app:it_title_text="@string/label_register_member_retake_pic"
+        app:it_title_textColor="@color/toollibrary_white"
+        app:it_title_textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+    <com.dyc.administrator.toollibrary.view.ImageTextView
+        android:id="@+id/confirm"
+        android:layout_width="230dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        app:it_icon="@mipmap/icon_queren"
+        app:it_title_text="@string/toolibrary_btn_confirm"
+        app:it_title_textColor="@color/toollibrary_white"
+        app:it_title_textSize="15sp"
+        android:background="@drawable/circle_corner_add_member_blue"
+        app:layout_constraintBottom_toBottomOf="@id/reTakePhoto"
+        app:layout_constraintStart_toEndOf="@id/reTakePhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onClick"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

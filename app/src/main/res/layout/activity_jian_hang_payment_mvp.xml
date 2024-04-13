@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dyc.order.cashier.mvp.activity.payment.JianHangPaymentMVPActivity">
+
+    <com.dyc.order.cashier.view.JianHangBadgeView
+        style="@style/jianhangPaymentBtnStyle"
+        app:badge_view_img="@mipmap/icon_settlement_fukuanma_l"
+        android:id="@+id/customShowCode"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/customScanCode"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.dyc.order.cashier.view.JianHangBadgeView
+        android:id="@+id/customScanCode"
+        style="@style/jianhangPaymentBtnStyle"
+        app:badge_view_img="@mipmap/icon_settlement_saoyisao_l"
+        app:layout_constraintStart_toEndOf="@id/customShowCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/customShowCode" />
+
+    <com.dyc.administrator.toollibrary.view.BadgeView
+        android:id="@+id/facePay"
+        style="@style/jianhangPaymentBtnStyle"
+        app:badge_view_img="@mipmap/icon_settlement_shualian_l"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="59dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/memberCardPay"
+        app:layout_constraintTop_toBottomOf="@id/customShowCode" />
+
+    <com.dyc.administrator.toollibrary.view.BadgeView
+        android:id="@+id/memberCardPay"
+        style="@style/jianhangPaymentBtnStyle"
+        app:badge_view_img="@mipmap/icon_settlement_member_l"
+        app:layout_constraintStart_toEndOf="@id/facePay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/facePay"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/customScanCodeStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_payment_custom_show_code_pay"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@id/customShowCode"
+        app:layout_constraintEnd_toEndOf="@id/customShowCode"
+        app:layout_constraintTop_toBottomOf="@id/customShowCode"/>
+
+    <TextView
+        android:id="@+id/customShowCodeStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_payment_custom_scan_code_pay"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@id/customScanCode"
+        app:layout_constraintEnd_toEndOf="@id/customScanCode"
+        app:layout_constraintTop_toBottomOf="@id/customScanCode"/>
+
+    <TextView
+        android:id="@+id/facePayStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_payment_face_pay"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@id/facePay"
+        app:layout_constraintEnd_toEndOf="@id/facePay"
+        app:layout_constraintTop_toBottomOf="@id/facePay"/>
+
+    <TextView
+        android:id="@+id/memberCardPayStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_enum_member_card_pay_str"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="@id/memberCardPay"
+        app:layout_constraintEnd_toEndOf="@id/memberCardPay"
+        app:layout_constraintTop_toBottomOf="@id/memberCardPay"/>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="340dp"
+        android:layout_height="43dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/circle_corner_dialog_confirm_btn"
+        android:textColor="@color/toollibrary_white"
+        android:text="@string/toolibrary_btn_confirm"
+        android:textSize="15sp"
+        android:visibility="invisible"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/toollibrary_white">
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

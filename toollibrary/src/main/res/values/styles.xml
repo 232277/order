@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Tool_Library_LoadProgressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.6</item><!-- 灰度 -->
+        <!--Dialog图标着色-->
+        <!--<item name="colorAccent">#ffffff</item>-->
+    </style>
+
+    <!-- dialog的动画 -->
+    <style name="toollibraryBottomDialog">
+        <item name="android:windowEnterAnimation">@anim/toollibrary_bottom_dialog_out</item>
+        <item name="android:windowExitAnimation">@anim/toollibrary_bottom_dialog_anim_in</item>
+    </style>
+
+    <style name="toollibraryNoTitleDialogStyle" parent = "@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="toollibraryBottomDialogTextStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/toollibrary_black</item>
+        <item name="android:layout_marginStart">17.5dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+    </style>
+
+    <style name="toollibraryBottomDialogItemStyle">
+        <item name="android:layout_marginStart">17.5dp</item>
+        <item name="android:layout_marginEnd">17.5dp</item>
+        <item name="android:layout_marginTop">13dp</item>
+    </style>
+    <style name="toollibraryAmountNumberStyle">
+        <item name="android:background">@drawable/toollibrary_bg_number_style</item>
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:textColor">#474646</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:gravity">center</item>-->
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+    <style name="toollibraryAmountConfirmNumberStyle">
+        <item name="android:background">@drawable/toollibrary_bg_confirm_number_style</item>
+<!--        <item name="android:textSize">16sp</item>-->
+<!--        <item name="android:textColor">#FFFFFF</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--        <item name="android:gravity">center</item>-->
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">128dp</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+    <style name="toollibraryDividerStyle">
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/toollibrary_divider_gray</item>
+    </style>
+
+    <!--首先在style里写属性-->
+    <style name="toollibraryNoStrokeDialog" parent="@android:style/Theme.Dialog">
+        <!-- 有无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@color/toollibrary_transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--无标题 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

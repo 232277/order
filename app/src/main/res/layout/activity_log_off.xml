@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dyc.order.cashier.mvp.activity.other.LogOffActivity"
+    android:background="@mipmap/bg_login">
+
+    <LinearLayout
+        android:id="@+id/leftView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/actionBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_top_bar_exit"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="@color/toollibrary_white"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintStart_toEndOf="@id/backArrow"
+            app:layout_constraintTop_toTopOf="@id/backArrow"
+            app:layout_constraintBottom_toBottomOf="@id/backArrow"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textColor="@color/toollibrary_white"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="87.5dp"
+        android:text="@string/label_log_off_exit"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/leftView" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/appName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@mipmap/txt_name"-->
+<!--        app:layout_constraintStart_toEndOf="@id/title"-->
+<!--        app:layout_constraintTop_toTopOf="@id/leftView"-->
+<!--        android:layout_marginTop="56dp"/>-->
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/label_pls_input_cashier_account"
+        android:textColor="@color/toollibrary_white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16.5dp"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/countDownStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/accountStr"
+        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="30dp"
+        android:text="(30s)"/>
+
+    <TextView
+        android:id="@+id/accountStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_login_account"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintStart_toStartOf="@id/notice"
+        app:layout_constraintTop_toBottomOf="@id/notice"
+        android:layout_marginTop="106dp"/>
+
+    <TextView
+        android:id="@+id/accountStrEng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_login_account_english"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_hint"
+        android:layout_marginStart="3.33dp"
+        app:layout_constraintStart_toEndOf="@id/accountStr"
+        app:layout_constraintBaseline_toBaselineOf="@id/accountStr"
+        android:alpha="0.3"/>
+
+    <EditText
+        android:theme="@style/MyEditText"
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:hint="@string/label_account_hint_please_input"
+        android:text="18559239787"
+        android:textSize="17sp"
+        android:textColor="@color/normal_item_text_color"
+        android:textColorHint="@color/normal_item_text_color_hint"
+        android:paddingBottom="20dp"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/accountStr"
+        app:layout_constraintStart_toStartOf="@id/accountStr" />
+
+    <TextView
+        android:id="@+id/pwdStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/accountStr"
+        app:layout_constraintTop_toBottomOf="@id/account"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_login_password"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"/>
+
+    <TextView
+        android:id="@+id/pwdStrEng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/pwdStr"
+        app:layout_constraintBaseline_toBaselineOf="@id/pwdStr"
+        android:layout_marginStart="3.33dp"
+        android:text="@string/label_login_password_english"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_hint"
+        android:alpha="0.3"/>
+
+    <EditText
+        android:theme="@style/MyEditText"
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:paddingBottom="20dp"
+        android:hint="@string/label_password_hint_please_input"
+        android:textColorHint="@color/normal_item_text_color_hint"
+        android:text="111111"
+        android:textSize="17sp"
+        android:textColor="@color/normal_item_text_color"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/pwdStr"
+        app:layout_constraintStart_toStartOf="@id/pwdStr"/>
+
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/toollibrary_circle_corner_btn"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="57dp"
+        android:text="@string/label_top_bar_exit"
+        android:textSize="15sp"
+        android:textColor="@color/toollibrary_white"
+        app:layout_constraintTop_toBottomOf="@id/pwd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

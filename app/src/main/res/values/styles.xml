@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="scanGoodsListTitleStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/edit_text_line_color</item>
+        <item name="colorControlActivated">@color/edit_text_line_color</item>
+    </style>
+
+    <style name="billMvpTitleStrStyle">
+        <item name="android:layout_marginStart">20.5dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/normal_item_text_color_gray_dark</item>
+    </style>
+
+    <style name="divideLineStyle">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/background_gray</item>
+    </style>
+
+    <style name="billDividerLineStyle">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">380dp</item>
+        <item name="android:background">@color/background_gray</item>
+    </style>
+
+    <style name="rechargeAmountChooseStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="badge_view_badge_img">@mipmap/icon_settlement_selected_l</item>
+        <item name="badge_view_background">@drawable/stroke_jianhang_payment_btn</item>
+        <item name="badge_view_background_checked">@drawable/stroke_jianhang_payment_btn_checked</item>
+    </style>
+
+    <style name="paymentBtnStyle">
+        <item name="android:background">@drawable/circle_corner_payment_btn_normal</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="badge_view_badge_img">@mipmap/icon_settlement_selected</item>
+        <item name="badge_view_background">@drawable/circle_corner_payment_btn_normal</item>
+        <item name="badge_view_background_checked">@drawable/circle_corner_payment_btn_checked</item>
+    </style>
+
+    <style name="jianhangPaymentBtnStyle">
+        <item name="android:layout_height">140dp</item>
+        <item name="android:layout_width">140dp</item>
+        <item name="badge_view_badge_img">@mipmap/icon_settlement_selected_l</item>
+        <item name="badge_view_background">@drawable/stroke_jianhang_payment_btn</item>
+        <item name="badge_view_background_checked">@drawable/stroke_jianhang_payment_btn_checked</item>
+    </style>
+
+    <style name="jiaohangPaymentBtnStyle">
+        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_width">160dp</item>
+        <item name="badge_view_badge_img">@mipmap/icon_settlement_selected_l</item>
+        <item name="badge_view_background">@drawable/stroke_jiaohang_payment_btn</item>
+        <item name="badge_view_background_checked">@drawable/stroke_jiaohang_payment_btn_checked</item>
+        <item name="badge_view_text_size">15sp</item>
+        <item name="badge_view_text_color">@color/normal_item_text_color_gray_dark</item>
+    </style>
+</resources>

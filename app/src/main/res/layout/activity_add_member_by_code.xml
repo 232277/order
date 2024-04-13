@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dyc.order.cashier.mvp.activity.member.AddMemberByCodeActivity">
+
+    <ImageView
+        android:id="@+id/backGround"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/bg_member_registered"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:id="@+id/leftView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/actionBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_top_bar_exit"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="@color/toollibrary_white"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintStart_toEndOf="@id/backArrow"
+            app:layout_constraintTop_toTopOf="@id/backArrow"
+            app:layout_constraintBottom_toBottomOf="@id/backArrow"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/countDownStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:textColor="@color/toollibrary_white"
+        android:layout_marginEnd="12.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/leftView"
+        app:layout_constraintBottom_toBottomOf="@id/leftView"/>
+
+    <ImageView
+        android:id="@+id/hiImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_add_member_hi"
+        android:layout_marginTop="81.5dp"
+        android:layout_marginStart="102.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/registerMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_register_member_register_member"
+        android:textSize="36sp"
+        android:textColor="@color/WHITE"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:layout_marginStart="9dp"
+        app:layout_constraintStart_toEndOf="@id/hiImg"
+        app:layout_constraintTop_toTopOf="@id/hiImg"
+        app:layout_constraintBottom_toBottomOf="@id/hiImg"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/codeLayout"
+        android:layout_width="316.5dp"
+        android:layout_height="376.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="155dp"
+        android:layout_marginStart="57dp"
+        android:background="@mipmap/bg_registered_card">
+
+        <!--        <com.makeramen.roundedimageview.RoundedImageView-->
+        <!--            android:id="@+id/codeBackground"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            app:riv_corner_radius="5dp"-->
+        <!--            android:background="@color/WHITE"/>-->
+
+        <TextView
+            android:id="@+id/noticeStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/normal_item_text_color_gray_dark"
+            android:textSize="13sp"
+            android:text="@string/label_register_member_please_use_wx_scan_code"
+            app:layout_constraintStart_toStartOf="@id/code"
+            app:layout_constraintEnd_toEndOf="@id/code"
+            app:layout_constraintBottom_toTopOf="@id/code"
+            android:layout_marginBottom="36.5dp"/>
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/code"
+            android:layout_width="188dp"
+            android:layout_height="188dp"
+            app:riv_corner_radius="5dp"
+            app:riv_border_color="@color/background_gray"
+            app:riv_border_width="1.5dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="97dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/decorateImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="271dp"
+        android:layout_marginTop="434dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/finishRegister"
+        android:layout_width="340dp"
+        android:layout_height="43dp"
+        android:background="@drawable/circle_corner_finish_register_member"
+        android:textColor="@color/normal_item_text_color_blue_light"
+        android:textSize="15sp"
+        android:text="@string/label_register_member_finish_register_member"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        android:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

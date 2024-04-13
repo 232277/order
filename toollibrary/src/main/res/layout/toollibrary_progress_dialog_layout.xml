@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialogBackground"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/toollibrary_progress_bar"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/animation"
+            style="@style/Tool_Library_LoadProgressDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/toollibrary_anim_loading"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:text="Message"
+            android:textColor="@color/toollibrary_white"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</LinearLayout>

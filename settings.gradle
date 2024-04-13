@@ -1,0 +1,2 @@
+include ':app', ':simplemvplibrary', ':toollibrary',':libuvccamera'
+rootProject.name='smartorder'

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_gray">
+
+    <ImageView
+        android:id="@+id/closeL"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@mipmap/icon_del_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5.5dp"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/countDownStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(30s)"
+        android:textSize="13sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/closeL"
+        app:layout_constraintBottom_toBottomOf="@id/closeL"
+        android:visibility="visible"
+        android:layout_marginEnd="15.5dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/memberInfoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="19dp">
+
+        <View
+            android:id="@+id/memberInfoBack"
+            android:layout_width="380dp"
+            android:layout_height="145dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle_corner_scan_goods_topbar"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:riv_corner_radius="60dp"
+            app:riv_border_width="1dp"
+            android:src="@mipmap/img_user_l"
+            app:riv_border_color="@color/toollibrary_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="黄女士"
+            android:textColor="@color/normal_item_text_color"
+            android:textSize="17sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="9dp"
+            />
+
+        <TextView
+            android:id="@+id/levelLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_text_member_detail_dialog_member_level"
+            android:textColor="@color/scan_goods_member_level_text_color"
+            android:text="普通会员"
+            android:layout_marginStart="6dp"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toTopOf="@id/name"
+            app:layout_constraintBottom_toBottomOf="@id/name"/>
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="111111111111111"
+            android:textSize="13sp"
+            android:textColor="@color/normal_item_text_color_gray_dark"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9999"
+            android:textColor="@color/normal_item_text_color"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@id/balanceStr"
+            app:layout_constraintEnd_toEndOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/divider"
+            />
+
+        <TextView
+            android:id="@+id/pointStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_member_dialog_point"
+            android:textSize="13sp"
+            android:textColor="@color/normal_item_text_color_gray_dark"
+            app:layout_constraintBottom_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/balance" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/background_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone"/>
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥9999.00"
+            android:textColor="@color/normal_item_text_color"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@id/balanceStr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/divider"
+            app:layout_constraintTop_toTopOf="@id/divider"
+            />
+
+        <TextView
+            android:id="@+id/balanceStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_member_dialog_balance"
+            android:textSize="13sp"
+            android:textColor="@color/normal_item_text_color_gray_dark"
+            app:layout_constraintBottom_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/divider"
+            app:layout_constraintTop_toBottomOf="@id/point"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/couponNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="优惠券(5)"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/memberInfoView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/enableCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:layout_constraintVertical_weight="1"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/couponNum"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

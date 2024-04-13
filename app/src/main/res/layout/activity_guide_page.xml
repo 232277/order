@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dyc.order.cashier.mvp.activity.other.GuidePageActivity"
+    android:id="@+id/rootLayout"
+    android:background="@mipmap/bg_guide">
+
+    <ImageView
+        android:id="@+id/hiImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_guide_hi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/welcomeStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="@string/label_guide_page_welcome_str"
+        android:lineSpacingMultiplier="0.8"
+        android:textColor="@color/toollibrary_white"
+        app:layout_constraintStart_toStartOf="@id/hiImg"
+        app:layout_constraintTop_toBottomOf="@id/hiImg"
+        android:layout_marginTop="10.5dp"
+        />
+
+    <View
+        android:id="@+id/mainViewBack"
+        android:layout_width="380dp"
+        android:layout_height="223dp"
+        android:background="@drawable/toollibrary_circle_corner"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeStr"/>
+
+    <TextView
+        android:id="@+id/usingStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19.5dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/label_guide_page_using_step_str"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_blue"
+        app:layout_constraintStart_toStartOf="@id/mainViewBack"
+        app:layout_constraintTop_toTopOf="@id/mainViewBack"/>
+
+    <TextView
+        android:id="@+id/usingStepEng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_guide_page_using_step_str_eng"
+        android:textSize="6sp"
+        android:textColor="@color/normal_item_text_color_gray"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/usingStep"
+        app:layout_constraintBaseline_toBaselineOf="@id/usingStep"/>
+
+    <ImageView
+        android:id="@+id/progress_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_steps"
+        android:layout_marginTop="7.5dp"
+        app:layout_constraintStart_toStartOf="@id/chooseGoodsImg"
+        app:layout_constraintEnd_toEndOf="@id/finishPay"
+        app:layout_constraintTop_toBottomOf="@id/chooseGoodsImg"/>
+
+    <ImageView
+        android:id="@+id/chooseGoodsImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_guide_select_goods"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="@id/usingStep"
+        app:layout_constraintTop_toBottomOf="@id/usingStep"/>
+
+    <TextView
+        android:id="@+id/chooseGoodsStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_guide_page_choose_goods_str"
+        android:textSize="13sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintStart_toStartOf="@id/chooseGoodsImg"
+        app:layout_constraintEnd_toEndOf="@id/chooseGoodsImg"
+        app:layout_constraintTop_toBottomOf="@id/progress_img"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/faceGoodsToScannerImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_guide_code_scanner"
+        android:layout_marginStart="2.5dp"
+        app:layout_constraintStart_toEndOf="@+id/chooseGoodsImg"
+        app:layout_constraintTop_toTopOf="@id/chooseGoodsImg"/>
+
+    <TextView
+        android:id="@+id/faceGoodsToScannerStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_guide_page_face_goods_to_scanner_str"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintStart_toStartOf="@id/faceGoodsToScannerImg"
+        app:layout_constraintEnd_toEndOf="@id/faceGoodsToScannerImg"
+        app:layout_constraintTop_toTopOf="@id/chooseGoodsStr"/>
+
+
+    <ImageView
+        android:id="@+id/finishPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_guide_pay"
+        android:layout_marginStart="2.5dp"
+        app:layout_constraintStart_toEndOf="@id/faceGoodsToScannerImg"
+        app:layout_constraintTop_toTopOf="@id/chooseGoodsImg" />
+
+    <TextView
+        android:id="@+id/finishPayStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_guide_page_finish_and_pay"
+        android:textSize="13sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintStart_toStartOf="@id/finishPay"
+        app:layout_constraintEnd_toEndOf="@id/finishPay"
+        app:layout_constraintTop_toTopOf="@id/chooseGoodsStr"/>
+
+    <ImageView
+        android:id="@+id/goScanBack"
+        android:layout_width="143.5dp"
+        android:layout_height="143.5dp"
+        android:background="@drawable/round_go_scan_shape"
+        android:layout_marginTop="20.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainViewBack"
+        />
+
+    <TextView
+        android:id="@+id/goScanGoods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_guide_page_go_scan_goods_code"
+        android:textColor="@color/toollibrary_white"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@id/mainViewBack"
+        app:layout_constraintEnd_toEndOf="@id/mainViewBack"
+        app:layout_constraintTop_toBottomOf="@id/mainViewBack"
+        android:layout_marginTop="95dp"/>
+
+    <ImageView
+        android:id="@+id/scanImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_guide_scan"
+        app:layout_constraintStart_toStartOf="@id/goScanGoods"
+        app:layout_constraintEnd_toEndOf="@id/goScanGoods"
+        app:layout_constraintBottom_toTopOf="@id/goScanGoods"
+        android:layout_marginBottom="@dimen/dp_10"/>
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

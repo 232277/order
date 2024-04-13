@@ -1,0 +1,341 @@
+<resources>
+    <string name="app_name">收银</string>
+    <string name="app_name_short">收银</string>
+    <!--界面提示字串-->
+    <string name="label_login_title">欢迎使用</string>
+    <string name="label_pls_input_cashier_account">请输入收银员账号</string>
+    <string name="label_account_hint_please_input">请输入收银账号</string>
+    <string name="label_password_hint_please_input">请输入收银密码</string>
+    <string name="label_login_agree_user_agreement">登录代表您已同意用户协议和隐私政策</string>
+    <string name="label_login_account">账号</string>
+    <string name="label_login_account_english">ACCOUNT</string>
+    <string name="label_login_account_hint">请输入收银账号</string>
+    <string name="label_login_password">密码</string>
+    <string name="label_login_password_english">PASSWORD</string>
+    <string name="label_login_password_hint">请输入收银密码</string>
+    <!--登出界面-->
+    <string name="label_log_off_thanks_for_using">感谢使用</string>
+    <string name="label_log_off_exit">退出</string>
+    <!--应用更新-->
+    <string name="label_update_version_dialog_word_update_content">更新内容</string>
+    <string name="label_update_version_dialog_sentence_new_version_found">发现新版本</string>
+    <string name="label_update_version_dialog_update_version_btn">升级</string>
+    <string name="label_update_version_dialog_file_download_failed">文件下载失败</string>
+    <string name="label_update_version_dialog_failed_update">更新失败</string>
+    <string name="label_update_version_no_install_permission">无应用安装权限</string>
+    <!--引导页-->
+    <string name="label_guide_page_default_shop_name">便利店</string>
+    <string name="label_guide_page_welcome_str">欢迎光临%s\n请自助下单</string>
+    <string name="label_guide_page_using_step_str">使用步骤</string>
+    <string name="label_guide_page_using_step_str_eng">STEPS FOR USAGE</string>
+    <string name="label_guide_page_choose_goods_str">挑选商品</string>
+    <string name="label_guide_page_face_goods_to_scanner_str">将商品条形码\n对准扫码器</string>
+    <string name="label_guide_page_finish_and_pay">结算并支付</string>
+    <string name="label_guide_page_go_scan_goods_code">去扫描商品\n条形码</string>
+    <!--扫商品页-->
+    <string name="label_scan_goods_member_register_or_login">会员登录/注册</string>
+    <string name="label_scan_goods_member_register_or_login_url_type"><u>会员登录/注册</u></string>
+    <string name="label_scan_goods_member_can_get_discount">(会员可优惠￥%s)</string>
+    <string name="label_scan_goods_member_can_get_points">(会员可获得%s分)</string>
+    <string name="label_scan_goods_clear_shopping_cart">清空购物车(%ds)</string>
+    <string name="label_scan_goods_can_not_get_code_go_search">扫不到条码?</string>
+    <string name="label_scan_goods_can_not_get_code_go_search_blue_part">去搜索</string>
+    <string name="label_scan_goods_pls_face_goods_to_scanner_str">请将商品条形码对准扫码器</string>
+    <string name="label_scan_goods_list_title_goods_name">商品名称</string>
+    <string name="label_scan_goods_list_title_unit_price">单价</string>
+    <string name="label_scan_goods_list_title_goods_num">数量</string>
+    <string name="label_scan_goods_list_title_total_amount">小计</string>
+    <string name="label_scan_goods_btn_goto_bill">结算</string>
+    <string name="label_scan_goods_goods_num_total">数量 : </string>
+    <string name="label_scan_goods_total_amount">合计 : </string>
+    <string name="label_scan_goods_member_price_label">会员价</string>
+    <string name="label_scan_goods_activity_price_label">活动价</string>
+    <string name="label_scan_goods_dialog_title_member">会员</string>
+    <string name="label_scan_goods_dialog_phone_not_match_face">手机号与会员人脸不匹配\n您可以直接登录/注册</string>
+    <string name="label_scan_goods_dialog_already_are_member_go_login">去登录</string>
+    <string name="label_scan_goods_dialog_scan_code_login">扫码登录</string>
+    <string name="label_scan_goods_dialog_not_member_yet">还不是会员,</string>
+    <string name="label_scan_goods_dialog_not_member_yet_blue_part">去注册</string>
+    <string name="label_scan_goods_dialog_title_member_login">会员登录</string>
+    <string name="label_scan_goods_dialog_pls_input_member_phone">请输入会员手机号</string>
+    <string name="label_scan_goods_dialog_member_can_get_discount">会员下单，可以优惠¥%s</string>
+    <string name="label_scan_goods_btn_already_are_member">已是会员,去登录</string>
+    <string name="label_scan_goods_btn_go_register">去注册</string>
+    <string name="label_scan_goods_dialog_member_not_exist">会员不存在</string>
+    <string name="label_scan_goods_dialog_recognized_member_face">识别到当前会员</string>
+    <string name="label_scan_goods_dialog_input_member_phone_last_four">请输入会员手机号后四位</string>
+    <string name="label_scan_goods_dialog_member_login_success_notice">%s\n欢迎使用%s自助购</string>
+    <string name="label_scan_goods_recommend">店长推荐</string>
+    <string name="label_scan_goods_no_name_goods">无名商品</string>
+    <!--搜索商品-->
+    <string name="label_search_goods_input_goods_code">请输入商品条形码后6位</string>
+    <!--会员对话框-->
+    <string name="label_member_dialog_point">积分</string>
+    <string name="label_member_dialog_balance">储值余额</string>
+    <string name="label_member_dialog_coupon">优惠券</string>
+    <string name="label_member_dialog_coupon_can_not_use">以下优惠券不可用</string>
+    <string name="label_member_dialog_coupon_can_not_price_break_discount">未达到满减条件</string>
+    <string name="label_member_dialog_coupon_price_condition_format">满%s减%s</string>
+    <!--会员注册-->
+    <string name="label_register_member_did_not_register_success">注册未成功，请重试</string>
+    <string name="label_register_member_did_not_get_address">未取得注册地址,重新获取</string>
+    <string name="label_register_member_please_use_wx_scan_code">请用微信扫描下方二维码</string>
+    <string name="label_register_member_register_member">会员注册</string>
+    <string name="label_register_member_member_login">会员登录</string>
+    <string name="label_register_member_finish_register_member">完成注册</string>
+    <string name="label_register_member_welcome_string">欢迎使用自助购</string>
+    <string name="label_register_member_phone">手机号</string>
+    <string name="label_register_member_name">姓名</string>
+    <string name="label_register_member_birthday">生日</string>
+    <string name="label_register_member_face_recognize">人脸识别</string>
+    <string name="label_register_member_face_recognize_notice">(识别后下次购物可以自动登录)</string>
+    <string name="label_register_member_go_face_recognize">去识别</string>
+    <string name="label_register_member_retry_face_recognize">重新识别</string>
+    <string name="label_register_member_pls_input_phone">请输入手机号</string>
+    <string name="label_register_member_pls_input_name">请输入姓名</string>
+    <string name="label_register_member_pls_choose_birthday">请选择生日</string>
+    <string name="label_register_member_face_processing">人脸识别中</string>
+    <string name="label_register_member_on_analyze_pic">图片处理中</string>
+    <string name="label_register_member_take_pic_btn">拍摄</string>
+    <string name="label_register_member_retake_pic">重拍</string>
+    <string name="label_register_member_jump"><u>跳过</u></string>
+    <!--结算界面-->
+    <string name="label_bill_mvp_should_pay">应付金额</string>
+    <string name="label_bill_mvp_ori_amount">原价金额</string>
+    <string name="label_bill_mvp_goods_discount">商品优惠</string>
+    <string name="label_bill_mvp_activity_discount">活动优惠</string>
+    <string name="label_bill_mvp_coupon">优惠券</string>
+    <string name="label_bill_mvp_no_enable_coupon">无可用优惠券</string>
+    <string name="label_bill_mvp_point_discount">积分抵现</string>
+    <string name="label_bill_mvp_coupon_enable_num">%d张可用</string>
+    <string name="label_bill_mvp_point_already_have">(%d积分)</string>
+    <string name="label_bill_mvp_pay_right_away">立即支付</string>
+    <string name="label_bill_mvp_activity_announce">满%s减%s</string>
+    <!--优惠券-->
+    <string name="label_coupon_activity_no_coupon">无优惠券</string>
+    <string name="label_coupon_activity_fail_get_coupon">获取优惠券失败</string>
+    <string name="label_coupon_activity_do_not_use_coupon">不使用券</string>
+    <string name="label_coupon_activity_choose_coupon">选择优惠券</string>
+    <string name="label_coupon_activity_choose">选择</string>
+    <string name="label_coupon_activity_chosen">已选择</string>
+    <string name="label_coupon_activity_useful_coupon_num">可用优惠券(%d)</string>
+    <string name="label_coupon_activity_useless_coupon_num">不可用优惠券(%d)</string>
+    <string name="label_coupon_activity_no_invalid_time">永远</string>
+    <!--收款页面-->
+    <string name="label_payment_custom_show_code_pay">出示付款码</string>
+    <string name="label_payment_custom_scan_code_pay">扫一扫</string>
+    <string name="label_payment_face_pay">刷脸支付</string>
+    <string name="label_payment_member_card_pay">会员储值卡</string>
+    <string name="label_payment_not_pay_return_shopping_cart_format">内未支付将返回购物车</string>
+    <string name="label_payment_pls_show">请出示付款码\n支持支付宝/微信</string>
+    <string name="label_payment_did_not_pay_for_now_short">暂时不买了</string>
+    <string name="label_payment_did_not_pay_for_now">暂时不买了\n清空购物车</string>
+    <string name="label_payment_clear_shopping_cart">清空购物车</string>
+    <string name="label_payment_member_not_exist">会员不存在</string>
+    <string name="label_payment_pls_scan_code_pay">请扫描二维码付款</string>
+    <string name="label_payment_pay_success">支付成功</string>
+    <string name="label_payment_pay_fail">支付失败</string>
+    <string name="label_payment_got_it">知道了</string>
+    <string name="label_payment_repay">重新支付</string>
+    <string name="label_payment_sure_not_pay_and_clear_cart">确定不购买商品吗?</string>
+    <string name="label_payment_jianhang_fail_get_authcode">支付结果未知</string>
+    <string name="label_payment_jiaohang_wechat">微信</string>
+    <string name="label_payment_jiaohang_ali">支付宝</string>
+    <string name="label_payment_jiaohang_saoyisao">扫一扫</string>
+    <string name="label_payment_jiaohang_chongzhi">会员储值</string>
+    <string name="label_payment_jiaohang_choose_pay_method">请选择收款方式</string>
+    <string name="label_payment_jiaohang_title_bill">收款</string>
+    <string name="label_payment_placing_order">下单中</string>
+    <!--支付结果页-->
+    <string name="label_payment_result_btn_str">知道了</string>
+    <string name="label_payment_fail_place_order">下单失败</string>
+    <string name="label_patmemt_fail_face_pay">人脸支付失败</string>
+    <!--储值余额-->
+    <string name="label_member_store_member_store_str">会员储值</string>
+    <string name="label_member_store_price_format_str">售价%s元</string>
+    <string name="label_member_store_recharge_success">充值成功</string>
+    <string name="label_member_store_recharge_fail">充值失败</string>
+    <string name="label_member_store_repay">重新支付</string>
+    <string name="label_member_store_merchant_can_not_use_store">商户未开通此功能</string>
+    <string name="label_member_store_recharge_now">立刻充值</string>
+    <string name="label_member_store_not_a_member">当前用户不是会员</string>
+    <string name="label_member_store_fail_get_recharge_list">获取充值规则失败</string>
+    <string name="label_member_store_nothing_here">什么也没有</string>
+    <string name="label_member_store_no_enable_recharge_rule">商户未设置充值金额，请联系商户</string>
+    <string name="label_member_store_wrong_recharge_data">储值金额错误</string>
+    <string name="label_member_store_wrong_pay_fields">错误的支付请求</string>
+    <string name="label_member_store_fail_place_recharge_order">充值订单下单失败</string>
+    <string name="label_member_store_pay_way_notice">会员储值卡支付</string>
+    <string name="label_member_store_focus_code_to_camera">请将会员码对准上方摄像头</string>
+    <string name="label_member_store_trans_amount">支付金额 : ￥%s</string>
+    <string name="label_member_store_pay_title">支付</string>
+    <string name="label_member_store_wrong_code_type">错误的码类型</string>
+    <string name="label_member_store_fail_decode">解码失败</string>
+    <string name="label_member_store_code_do_not_match_member">储值码与会员不匹配</string>
+    <string name="label_member_store_get_member_by_code_fail">通过码获取会员信息失败</string>
+    <string name="label_member_store_cancel_order_fail">取消旧订单失败</string>
+    <string name="label_member_store_re_place_order_fail">重新下单失败</string>
+    <string name="label_member_store_pls_scan_store_pay_code">请扫码进行储值支付</string>
+    <string name="label_member_store_change_to_custom_show_code">展示储值码支付</string>
+    <string name="label_member_store_fail_get_store_code">获取储值码失败</string>
+    <!--订单枚举值 0=现金,1=支付宝,2=微信,3=银行卡,4=刷脸-->
+    <string name="label_enum_unknown_pay_str">未知</string>
+    <string name="label_enum_cash_pay_str">现金</string>
+    <string name="label_enum_ali_pay_str">支付宝</string>
+    <string name="label_enum_wechat_pay_str">微信</string>
+    <string name="label_enum_bank_card_pay_str">银行卡</string>
+    <string name="label_enum_face_pay_str">刷脸</string>
+    <string name="label_enum_debit_card_pay_str">储蓄卡</string>
+    <string name="label_enum_member_card_pay_str">会员卡</string>
+    <!--订单来源 0=收银机,1=微信,2=终端-->
+    <string name="label_enum_order_source_cashier_str">收银机</string>
+    <string name="label_enum_order_source_wechat_str">微信</string>
+    <string name="label_enum_order_source_pos_str">终端</string>
+    <string name="label_enum_order_source_applet_str">小程序</string>
+    <!--订单状态 0=收银机,1=微信,2=终端-->
+    <string name="label_enum_trans_type_sale">销售</string>
+    <string name="label_enum_trans_type_refund">退货</string>
+    <string name="label_enum_trans_type_direct_pay">直接收款</string>
+    <!--0=待支付,1=已完成,-1支付失败，2订单取消，3待邮寄，4邮寄中，5退款中，6拒绝退款，7已退款，8申请退款-->
+    <string name="label_enum_trans_flag_not_pay">待支付</string>
+    <string name="label_enum_trans_flag_already_pay">已完成</string>
+    <string name="label_enum_trans_flag_fail_pay">支付失败</string>
+    <string name="label_enum_trans_flag_close_pay">已取消</string>
+    <string name="label_enum_trans_flag_to_deliver">待发货</string>
+    <string name="label_enum_trans_flag_in_deliver">待收货</string>
+    <string name="label_enum_trans_flag_in_refund">退货中</string>
+    <string name="label_enum_trans_flag_refund_denied">拒绝退货</string>
+    <string name="label_enum_trans_flag_already_refund">已退货</string>
+    <string name="label_enum_trans_flag_apply_refund">申请退货</string>
+    <string name="label_enum_trans_flag_unknow_pay">状态未知</string>
+    <string name="label_enum_trans_flag_self_fetch">待自提</string>
+    <string name="label_enum_trans_flag_apply_cancel">申请取消订单</string>
+    <string name="label_enum_trans_flag_buyer_cancel_refund">买家取消退货</string>
+    <!--refundStatus-->
+    <string name="label_enum_refund_status_part_refund">部分退货</string>
+    <string name="label_enum_refund_status_all_refund">全部退货</string>
+
+
+    <!--topBar标题-->
+    <string name="label_top_bar_add_member">注册会员</string>
+    <string name="label_top_bar_search_goods">搜索商品</string>
+    <string name="label_top_bar_bill">结算</string>
+    <string name="label_top_bar_exit">退出</string>
+    <string name="label_top_bar_pay">支付</string>
+
+    <!--程序里用到的-->
+
+    <!--按钮字串-->
+    <string name="btn_login">登录</string>
+    <string name="btn_go_register">去注册</string>
+    <string name="btn_finish">完成</string>
+    <string name="btn_search">搜索</string>
+
+
+    <!--提示消息-->
+    <string name="tip_cancel_order">取消订单</string>
+    <string name="tip_no_goods_in_cart">没有可结算的商品</string>
+    <string name="tip_upload_face_feature_fail">人脸上传失败</string>
+    <string name="tip_face_recog_fail">人脸识别失败</string>
+    <string name="tip_pls_input_correct_phone_last_four">请输入4位手机尾号</string>
+    <string name="tip_fail_open_camera">无法开启摄像头</string>
+    <string name="tip_get_member_enable_coupon_fail">暂无可用优惠券</string>
+    <string name="tip_get_member_coupon_fail">获取用户优惠券失败</string>
+    <string name="tip_search_goods_wrong_goods_code">错误的条码格式</string>
+    <string name="tip_member_phone_format_no_correct">请输入正确的手机号</string>
+    <string name="tip_account_null">账号不能为空</string>
+    <string name="tip_pwd_null">密码不能为空</string>
+    <string name="tip_do_not_agree_agreement">请同意用户协议及隐私政策</string>
+    <string name="tip_account_not_register">该手机号未注册!</string>
+    <string name="tip_wrong_account_or_pwd">手机号错误或密码不正确</string>
+    <string name="tip_no_authorization_or_time_out">登录失效请重新登录</string>
+    <string name="tip_permission_deny">权限申请被拒绝</string>
+    <string name="tip_scan_code_fail">扫码失败</string>
+    <string name="tip_in_develop">开发中</string>
+    <string name="tip_can_not_be_more_than_total">不可超过总价</string>
+    <string name="tip_member_card_number_can_not_null">会员卡号不可为空</string>
+    <string name="tip_member_phone_can_not_null">手机号不可为空</string>
+    <string name="tip_member_phone_wrong">手机号格式错误</string>
+    <string name="tip_member_name_can_not_null">会员名不可为空</string>
+    <string name="tip_already_copy_order_number">已复制单号</string>
+    <string name="tip_scan_code_useless">无效码</string>
+    <string name="tip_fail_to_get_print_data">获取打印数据失败</string>
+    <string name="tip_fail_to_get_printer">无法启动打印设备</string>
+    <string name="tip_fail_to_print_no_paper">缺纸</string>
+    <string name="tip_fail_to_print_over_hit">打印设备过热</string>
+    <string name="tip_print_exception">打印设备异常</string>
+    <string name="tip_scan_exception">扫码设备异常</string>
+
+    <string name="dialog_member_overage_not_enough">会员储值不足，请充值</string>
+    <string name="dialog_member_register_fail_get_member_card_number">生成会员卡号失败</string>
+    <string name="dialog_scan_goods_not_found_goods">未找到商品</string>
+    <string name="dialog_scan_goods_not_found_format_str">未找到该商品%s\n该商品不可结算</string>
+    <string name="dialog_scan_goods_loading_member_info">加载会员信息中…</string>
+    <string name="dialog_scan_goods_member_not_exist">会员不存在</string>
+    <string name="dialog_scan_goods_member_not_exist_go_register">会员不存在,去注册会员,享受更多权益</string>
+    <string name="dialog_operate_success">操作成功</string>
+    <string name="dialog_operate_fail">操作失败</string>
+    <string name="dialog_member_register_add_member_success">注册成功</string>
+    <string name="dialog_member_register_add_member_fail">注册失败</string>
+    <string name="dialog_pls_wait">请稍候</string>
+    <string name="dialog_in_confirm_res">确认支付结果中</string>
+    <string name="dialog_error_ch_title">错误</string>
+    <string name="dialog_error_title">error</string>
+    <string name="dialog_add_to_shoppingcart">加入购物车</string>
+    <string name="dialog_coupon_explain_first_line">1.优惠券满%s减%s元,全品类可用(优惠商品除外)</string>
+    <string name="dialog_coupon_explain_second_line">2.一个订单只能使用一张优惠券</string>
+    <string name="dialog_coupon_explain_third_line">3.优惠券只能抵扣商品费用,不能抵扣配送费</string>
+    <string name="dialog_member_store_loading_member_info">加载会员信息中…</string>
+    <string name="dialog_member_store_cancel_last_order">取消旧订单…</string>
+    <string name="dialog_member_re_place_order">重新下单…</string>
+    <string name="dialog_pls_install_jiaohang_app">请安装交行收单</string>
+    <string name="dialog_pls_install_jianhang_app">请安装建行收单</string>
+
+
+    <!--response code/status code等-->
+    <string name="error_str_unknow_fail">未知错误</string>
+    <string name="error_str_unpack_fail">响应数据错误</string>
+    <string name="error_net_error_no_net">网络状况差</string>
+    <string name="error_net_error_unknown_host">服务器地址无效</string>
+    <string name="error_net_error_socket_timeout">服务器未响应</string>
+    <string name="error_login_un_authorization">登陆失效，请重新登陆</string>
+
+    <string name="error_code_unknow_code">-1</string>
+    <string name="error_code_unpack_error_code">-2</string>
+    <string name="error_code_net_no_net_error_code">-3</string>
+    <string name="error_code_unknow_host_error_code">-4</string>
+    <string name="error_code_socket_timeout_error_code">-5</string>
+    <string name="error_code_un_authorization_error_code">-6</string>
+
+
+    <!--打印信息-->
+    <string name="print_item_title">欢迎光临</string>
+    <string name="print_item_shop_name">门店:</string>
+    <string name="print_item_order_num">单号:</string>
+    <string name="print_item_time">时间:</string>
+    <string name="print_item_goods_name">名称</string>
+    <string name="print_item_goods_unit">单价</string>
+    <string name="print_item_single_goods_num">数量</string>
+    <string name="print_item_goods_total">小计</string>
+    <string name="print_item_goods_num">商品数量:</string>
+    <string name="print_item_ori_price">原价金额:</string>
+    <string name="print_item_goods_discount">商品优惠:</string>
+    <string name="print_item_total_erase">整单优惠:</string>
+    <string name="print_item_should_pay">应付金额:</string>
+    <string name="print_item_pay">支付:</string>
+    <string name="print_item_member">会员:</string>
+    <string name="print_item_member_point">积分:</string>
+    <string name="print_item_member_amount">储值余额:</string>
+    <string name="print_item_welcome">谢谢惠顾，欢迎下次光临</string>
+    <string name="print_item_nothing">无</string>
+    <string name="print_item_empty_line">                                              </string>
+    <string name="print_item_divider">----------------------------------------------</string>
+
+
+    <string name="announcement_strings">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</string>
+
+    <string name="provider_name">com.centerm.smartorder.fileprovider</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

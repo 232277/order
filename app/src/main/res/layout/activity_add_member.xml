@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dyc.order.cashier.mvp.activity.member.AddMemberActivity">
+
+    <ImageView
+        android:id="@+id/hiImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="71dp"
+        android:src="@mipmap/icon_guide_hi_blue"/>
+
+    <TextView
+        android:id="@+id/welcomeStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_register_member_welcome_string"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/normal_item_text_color"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/hiImg"
+        app:layout_constraintTop_toTopOf="@id/hiImg"
+        app:layout_constraintBottom_toBottomOf="@id/hiImg"/>
+
+    <TextView
+        android:id="@+id/countDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(120s)"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/phoneStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/toollibrary_red"
+        app:layout_constraintTop_toTopOf="@id/phoneStr"
+        app:layout_constraintEnd_toStartOf="@id/phoneStr"/>
+
+    <TextView
+        android:id="@+id/phoneStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_register_member_phone"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/memberPhone"
+        app:layout_constraintTop_toBottomOf="@id/welcomeStr"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="47dp"/>
+
+    <EditText
+        android:id="@+id/memberPhone"
+        android:layout_width="271dp"
+        android:layout_height="37dp"
+        app:layout_constraintStart_toEndOf="@id/phoneStr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/phoneStr"
+        app:layout_constraintBottom_toBottomOf="@id/phoneStr"
+        android:hint="@string/label_register_member_pls_input_phone"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="10dp"
+        android:focusedByDefault="true"
+        android:inputType="number"
+        android:background="@drawable/circle_corner_search_goods_edit"
+        android:textColor="@color/normal_item_text_color"
+        android:textSize="15sp"
+        android:paddingStart="11dp"/>
+
+
+    <TextView
+        android:id="@+id/nameStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/toollibrary_red"
+        app:layout_constraintTop_toTopOf="@id/nameStr"
+        app:layout_constraintEnd_toStartOf="@id/nameStr"/>
+
+    <TextView
+        android:id="@+id/nameStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_register_member_name"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintEnd_toEndOf="@+id/phoneStr"
+        app:layout_constraintTop_toTopOf="@id/memberName"
+        app:layout_constraintBottom_toBottomOf="@id/memberName" />
+
+    <EditText
+        android:id="@+id/memberName"
+        android:layout_width="271dp"
+        android:layout_height="37dp"
+        app:layout_constraintStart_toEndOf="@id/nameStr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/memberPhone"
+        android:hint="@string/label_register_member_pls_input_name"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/circle_corner_search_goods_edit"
+        android:textColor="@color/normal_item_text_color"
+        android:textSize="15sp"
+        android:paddingStart="11dp"/>
+
+    <TextView
+        android:id="@+id/birthStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_register_member_birthday"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        app:layout_constraintEnd_toEndOf="@+id/phoneStr"
+        app:layout_constraintTop_toTopOf="@id/memberBirth"
+        app:layout_constraintBottom_toBottomOf="@id/memberBirth" />
+
+    <TextView
+        android:id="@+id/memberBirth"
+        android:layout_width="271dp"
+        android:layout_height="37dp"
+        app:layout_constraintStart_toEndOf="@id/birthStr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/memberName"
+        android:hint="@string/label_register_member_pls_choose_birthday"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/circle_corner_search_goods_edit"
+        android:textColor="@color/normal_item_text_color"
+        android:textSize="15sp"
+        android:paddingStart="11dp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/faceRecogStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/phoneStr"
+        app:layout_constraintTop_toBottomOf="@id/memberBirth"
+        android:layout_marginTop="24dp"
+        android:textSize="15sp"
+        android:text="@string/label_register_member_face_recognize"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/facePic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:riv_corner_radius="50dp"
+        app:riv_border_width="0.5dp"
+        app:riv_border_color="@color/toollibrary_divider_gray"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@id/memberPhone"
+        app:layout_constraintTop_toTopOf="@id/faceRecogStr"
+        app:layout_constraintBottom_toBottomOf="@id/faceRecogStr"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/recognize"
+        android:layout_width="122dp"
+        android:layout_height="37dp"
+        android:text="@string/label_register_member_go_face_recognize"
+        android:textColor="@color/toollibrary_white"
+        android:textSize="15sp"
+        android:background="@drawable/circle_corner_dialog_confirm_btn"
+        app:layout_constraintEnd_toEndOf="@id/memberPhone"
+        app:layout_constraintTop_toTopOf="@id/faceRecogStr"
+        app:layout_constraintBottom_toBottomOf="@id/faceRecogStr"/>
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="340dp"
+        android:layout_height="43dp"
+        android:text="@string/btn_finish"
+        android:background="@drawable/circle_corner_dialog_confirm_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faceRecogStr"
+        android:layout_marginTop="67dp"/>
+
+    <ImageView
+        android:id="@+id/bgRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@mipmap/bg_registered"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

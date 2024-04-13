@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.dyc.order.cashier.mvp.fragment.ShoppingCartMVPFragment"
+    android:background="@color/background_gray">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/goodsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recommend"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomDivider"
+        android:background="@color/scan_goods_recommend_background_color"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/recommendTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_scan_goods_recommend"
+            android:textColor="@color/normal_item_text_color_gray"
+            android:textSize="11sp"
+            android:layout_marginTop="11.5dp"
+            android:layout_marginStart="13dp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="1"
+            app:layout_constraintStart_toStartOf="@id/recommendTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recommendTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginStart="13dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/bottomDivider"
+        style="@style/divideLineStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomView"
+        android:layout_height="0.5dp"
+        android:background="@color/normal_item_text_color_hint"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/toollibrary_white">
+
+        <TextView
+            android:id="@+id/totalNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数量:0"
+            android:textSize="13sp"
+            android:textColor="@color/normal_item_text_color_gray_dark"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/goBill"
+            app:layout_constraintBottom_toTopOf="@id/totalAmount"/>
+
+        <TextView
+            android:id="@+id/totalAmountStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_scan_goods_total_amount"
+            android:textSize="13sp"
+            android:textColor="@color/normal_item_text_color_gray_dark"
+            app:layout_constraintStart_toStartOf="@id/totalNum"
+            app:layout_constraintBottom_toBottomOf="@id/goBill"
+            app:layout_constraintTop_toBottomOf="@id/totalNum"/>
+
+        <TextView
+            android:id="@+id/totalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0.00"
+            android:textSize="13sp"
+            android:textColor="@color/normal_item_text_color_red"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/totalAmountStr"
+            app:layout_constraintBaseline_toBaselineOf="@id/totalAmountStr"/>
+
+        <TextView
+            android:id="@+id/goBill"
+            android:layout_width="160dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/circle_corner_btn_go_bill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/btnIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/icon_jiesuan"
+            android:drawablePadding="6dp"
+            android:text="@string/label_scan_goods_btn_goto_bill"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="@color/toollibrary_white"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/goBill"
+            app:layout_constraintEnd_toEndOf="@id/goBill"
+            app:layout_constraintTop_toTopOf="@id/goBill"
+            app:layout_constraintBottom_toBottomOf="@id/goBill"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

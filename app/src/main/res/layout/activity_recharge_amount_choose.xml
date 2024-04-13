@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/topBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/bg_chongzhi"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/topBarLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/arrow"
+                android:layout_gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/actionBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_member_store_member_store_str"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@color/toollibrary_white"
+                android:layout_marginStart="@dimen/dp_10"
+                app:layout_constraintStart_toEndOf="@id/backArrow"
+                app:layout_constraintTop_toTopOf="@id/backArrow"
+                app:layout_constraintBottom_toBottomOf="@id/backArrow"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/countDownStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/WHITE"
+            android:textSize="13sp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/topBarLeft"
+            app:layout_constraintBottom_toBottomOf="@id/topBarLeft"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="55dp"
+        android:src="@mipmap/icon_topup"/>
+
+    <TextView
+        android:id="@+id/amountRemain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon"
+        android:layout_marginTop="13dp"
+        android:textStyle="bold"
+        android:textColor="@color/WHITE"
+        android:textSize="36sp"
+        android:text="￥260"
+        android:includeFontPadding="false"/>
+
+    <TextView
+        android:id="@+id/amountRemainStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/amountRemain"
+        android:text="@string/label_member_store_member_store_str"
+        android:textSize="15sp"
+        android:textColor="@color/WHITE"
+        android:layout_marginTop="13dp"
+        android:includeFontPadding="false"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/topBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="12dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/amountChooseView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </androidx.core.widget.NestedScrollView>
+
+    <!--现在是说不要这个按钮，但是先留着，省的之后要-->
+    <Button
+        android:id="@+id/rechargeNow"
+        android:layout_width="340dp"
+        android:layout_height="43dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/circle_corner_dialog_confirm_btn"
+        android:textSize="15sp"
+        android:textColor="@color/WHITE"
+        android:text="@string/label_member_store_recharge_now"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

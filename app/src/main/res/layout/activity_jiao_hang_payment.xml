@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dyc.order.cashier.mvp.activity.payment.JiaoHangPaymentMVPActivity"
+    android:background="@color/jiaohang_bill_background_color">
+
+
+    <ImageView
+        android:id="@+id/topBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:src="@mipmap/bg_home"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="30dp"
+        android:layout_height="37dp"
+        android:src="@mipmap/arrow"
+        android:scaleType="centerInside"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="2dp"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_top_bar_bill"
+        android:textSize="17sp"
+        android:layout_gravity="center"
+        android:textColor="@color/toollibrary_white"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backArrow"
+        app:layout_constraintBottom_toBottomOf="@id/backArrow"/>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥0.00"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/toollibrary_white"
+        app:layout_constraintStart_toStartOf="@id/topBackground"
+        app:layout_constraintEnd_toEndOf="@id/topBackground"
+        app:layout_constraintBottom_toBottomOf="@id/topBackground"
+        android:layout_marginBottom="45dp"/>
+
+
+    <TextView
+        android:id="@+id/noticeStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_payment_jiaohang_choose_pay_method"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBackground"
+        android:textSize="15sp"
+        android:textColor="@color/normal_item_text_color_gray_dark"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="27dp"/>
+
+    <com.dyc.order.cashier.view.JiaoHangBadgeView
+        style="@style/jiaohangPaymentBtnStyle"
+        app:badge_view_img="@mipmap/icon_wechat"
+        android:id="@+id/wechatCode"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="16dp"
+        app:badge_view_text="@string/label_payment_jiaohang_wechat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/aliCode"
+        app:layout_constraintTop_toBottomOf="@id/noticeStr"/>
+
+    <com.dyc.order.cashier.view.JiaoHangBadgeView
+        android:id="@+id/aliCode"
+        style="@style/jiaohangPaymentBtnStyle"
+        app:badge_view_img="@mipmap/icon_alipay"
+        app:badge_view_text="@string/label_payment_jiaohang_ali"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintStart_toEndOf="@id/wechatCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/wechatCode" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/saoyisaoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="@id/wechatCode"
+        app:layout_constraintEnd_toStartOf="@id/memberCardPay"
+        app:layout_constraintTop_toBottomOf="@id/wechatCode">
+        <com.dyc.order.cashier.view.JiaoHangBadgeView
+            android:id="@+id/saoyisao"
+            style="@style/jiaohangPaymentBtnStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/saoyisaoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_saoyisao"
+            app:layout_constraintStart_toStartOf="@id/saoyisao"
+            app:layout_constraintEnd_toEndOf="@id/saoyisao"
+            app:layout_constraintTop_toTopOf="@id/saoyisao"
+            android:layout_marginTop="7.5dp"/>
+        <ImageView
+            android:id="@+id/wechatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_payment_wechat_s"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@id/saoyisaoIcon"
+            app:layout_constraintEnd_toStartOf="@id/aliIcon"
+            app:layout_constraintTop_toBottomOf="@id/saoyisaoIcon"/>
+        <ImageView
+            android:id="@+id/aliIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_payment_ali_s"
+            app:layout_constraintStart_toEndOf="@id/wechatIcon"
+            app:layout_constraintTop_toTopOf="@id/wechatIcon"
+            app:layout_constraintEnd_toStartOf="@id/unionIcon"/>
+        <ImageView
+            android:id="@+id/unionIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_payment_unionpay_s"
+            app:layout_constraintStart_toEndOf="@id/aliIcon"
+            app:layout_constraintTop_toTopOf="@id/wechatIcon"
+            app:layout_constraintEnd_toEndOf="@id/saoyisaoIcon"/>
+        <TextView
+            android:id="@+id/saoyisaoStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/saoyisaoIcon"
+            app:layout_constraintEnd_toEndOf="@id/saoyisaoIcon"
+            app:layout_constraintTop_toBottomOf="@id/wechatIcon"
+            android:layout_marginTop="11dp"
+            android:text="@string/label_payment_jiaohang_saoyisao"
+            android:textSize="15sp"
+            android:textColor="@color/normal_item_text_color_gray_dark"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.dyc.order.cashier.view.JiaoHangBadgeView
+        android:id="@+id/memberCardPay"
+        style="@style/jiaohangPaymentBtnStyle"
+        app:badge_view_img="@mipmap/icon_member_chongzhi"
+        app:badge_view_text="@string/label_payment_jiaohang_chongzhi"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintStart_toEndOf="@id/saoyisaoLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/saoyisaoLayout"
+        android:visibility="invisible"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/confirm"-->
+<!--        android:layout_width="340dp"-->
+<!--        android:layout_height="43dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        android:background="@drawable/circle_corner_dialog_confirm_btn"-->
+<!--        android:textColor="@color/toollibrary_white"-->
+<!--        android:text="@string/toolibrary_btn_confirm"-->
+<!--        android:textSize="15sp"/>-->
+
+<!--    <ScrollView-->
+<!--        android:id="@+id/scroll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="@color/toollibrary_white">-->
+<!--        <TextView-->
+<!--            android:id="@+id/test"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </ScrollView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:lines="1"
+        android:textColor="@color/toollibrary_my_edit_text_color"/>
+
+    <ImageView
+        android:id="@+id/endImg"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/toollibrary_loading"/>
+
+</LinearLayout>
